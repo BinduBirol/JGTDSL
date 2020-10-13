@@ -1,0 +1,3 @@
+[P:1] Submit Multiple form using jQquery Ajax.
+	[S] Check the example here : File : meterDisconnection.js 
+								 Method : function saveMeterDisconnInfo()

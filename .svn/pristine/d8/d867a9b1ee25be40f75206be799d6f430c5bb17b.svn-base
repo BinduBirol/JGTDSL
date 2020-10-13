@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//JGTDSL_WEB/WEB-INF/jsp/billing/BillAdjustmentOtherHome.jsp=UTF-8
+encoding//JGTDSL_WEB/WEB-INF/jsp/customer/DemandNote.jsp=UTF-8
+encoding//developer/database/Scripts.sql=UTF-8
+encoding//src/org/jgtdsl/reports/template/MeteredBillFormat.java=UTF-8
+encoding//src/org/jgtdsl/reports/template/MeteredBillFormatWithData.java=UTF-8
+encoding//src/org/jgtdsl/reports/template/SinglePageBilling.java=UTF-8
+encoding//src/org/jgtdsl/reports/template/SinglePageBillingFinal.java=UTF-8
+encoding//src/org/jgtdsl/reports/template/SinglePageInstallmentBilling.java=UTF-8

@@ -1,0 +1,50 @@
+package org.jgtdsl.enums;
+
+public enum  Area {
+	SYLHET_EAST(0,"Sylhet_East"),
+	SYLHET_WEST(1,"Sylhet_West"),
+	SYLHET_SOUTH(2,"Sylhet_South"),
+	SUNAMGONJ(3,"Sunamgonj"),
+	BOGRA(4,"B"),
+	SRIMANGAL(5,"Srimangal"),
+	VANIGAS(6,"Vanugas"),
+	KOMOLGANJ(7,"Komolganj"),
+	MAULVIBAZAR(8,"Maulvibazar"),
+	//
+	CHHATAK9(9,"CHHATAK"),
+	GOLAPGONJ(10,"Golapgonj"),
+	BOROLEKHA(11,"Borolekha"),
+	CHHATAK(12,"CHHATAK"),
+	SUNAMGONJ2(13,"Sunamgonj"),
+	FENCHUGONJ_k(14,"Fenchugonj_1"),	
+	FENCHUGONJ(15,"Fenchugonj"),
+	KULAURA(16,"Kulaura"),
+	SRIMANGAL1(17,"Srimangal"),
+	BEANIBAZAR(18,"Beanibazar"),
+	JURI(19,"Juri"),
+	HOBIGONJ(20,"Hobigonj"),
+	KULAURA1(21,"Kulaura"),
+	NOBIGONJ(22,"Nobigonj"),
+	SYLHET_NORTH(23,"Sylhet_North"),
+	MAULVIBAZAR1(24,"Maulvibazar");
+	
+	
+	
+
+    private String label;
+    private int id;
+
+    private Area(int id,String label) {
+        this.id=id;
+    	this.label = label;
+    }
+
+    public String getLabel() {
+        return label;
+    }
+    public int getId() {
+        return id+1;
+    }
+
+    
+}

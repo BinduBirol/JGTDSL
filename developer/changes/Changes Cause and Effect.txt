@@ -1,0 +1,66 @@
+This document focus on the changes that has been made in the application and the reason behind this.
+We can't do descriptive comments inside the code. That looks bad. And that is why this plain text document is necessary. 
+If any developer fail to understand the reason behind any change, s/he will at first look in to the code for the change explanation. If the code does not hold 
+sufficient explanation then s/he will try to find the explanation in this document.
+
+Note: Although it's an old approach to write down the changes in a document. In this case I believe that this will help us(the developer of the project).
+
+_________________________________________________
+||____________Date : 01.04.2015________________||
+
+Developer : Ifti
+Change : The project now included zozo.accordion.js instead of zozo.accordion.min.js
+Reason :  I found that when I have putted rememberState:true in the accordion setting option object, expandModes.multiple default enable by the API.
+          After looking in to the code I found that line number 685 of zozo.accordion.js read the local store information as an Array and then make the expandMode
+          multiple. Which is wrong. Wo I just commented the line and using the zozo.accordion.js file instead of zozo.accordion.min.js file.
+
+Pending Task : When the project will be done. We will convert this zozo.accordion.js to zozo.accordion.min.js  and include that updated file in the project.
+
+_________________________________________________
+||____________Date : 22.04.2015________________||
+
+Developer : Ifti
+Change : jquery.autocomplete.js => at line number 198 I have disabled the feature onfocus
+Reason : Suppose a user has typed a customer id and selected it and then the corresponding customer information fetched from database.
+         Now if I place the cursur in the autocomplete textbox it again search for the customer info. Which means onfocus actually 
+         call the onselect method internally. We don't need that feature.
+         
+         We have actually used the custom autocomplete from this location -
+         https://github.com/devbridge/jQuery-Autocomplete
+         
+         Not the standard jquery autocomplete.
+
+Pending Task : No pending task.
+_________________________________________________
+||____________Date : 01.05.2015________________||
+
+Developer : Ifti
+Change : Overrides the default height of the chosen component
+Reason : I have changed the default height of the chosen component to make it look good.
+         
+         File : chosen.css
+         Line Number : 204
+         css Class Name: .chosen-container-multi .chosen-choices {
+         Commented:   height: auto !important;
+  					  height: 1%;
+  		 Added:		  min-height:25px !important;
+         
+
+Pending Task : No pending task.
+
+_________________________________________________
+||____________Date : 23.07.2015________________||
+
+Developer : Ifti
+Change : Changes customer_id to comm_customer_id
+Reason : In many interfaces we need to show the customer basic information like Customer ID,Customer Type,Region/Area,Category,Customer Name,F/H Name and Address.
+         So we have shifted this basic information form to a new jsp file named CustomerInfo.jsp.
+         
+         And also added a prefix "comm_" for all the field id. So that it can't create any conflict with other fields 
+         of the mother interface.
+         
+         Updated Method : setCustomerInfo(field_prefix,data)
+		 
+		 For setting the customer information we have added a prefix parameter in setCustomerInfo Table         
+
+Pending Task : Need to find out the reference of old setCustomerInfo method and fix it with the new implementation.
